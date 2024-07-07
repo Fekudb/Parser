@@ -84,7 +84,7 @@ async def parse_vacancies(update: Update, context: ContextTypes.DEFAULT_TYPE, qu
         await update.message.reply_text("Не удалось получить данные с сайта.")
 
 def main() -> None:
-    # Create the database table if it doesn't exist
+    
     create_table()
 
     application = Application.builder().token(TELEGRAM_TOKEN).build()
