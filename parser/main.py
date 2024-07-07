@@ -92,7 +92,7 @@ def main() -> None:
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    # Start the Bot
+    
     application.run_polling()
 
 if __name__ == '__main__':
