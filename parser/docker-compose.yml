@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:latest
+    image: postgres:13
     environment:
-      POSTGRES_DB: postgres
+      POSTGRES_DB: parserdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 132465
     ports:
@@ -17,7 +17,8 @@ services:
     depends_on:
       - db
     environment:
-      DB_NAME: postgres
+      TELEGRAM_TOKEN: '7351786094:AAHadA9zR-fqqZvMZZqdmTFoVuSPLlzDODo'
+      DB_NAME: parserdb
       DB_USER: postgres
       DB_PASSWORD: 132465
       DB_HOST: db
@@ -27,4 +28,5 @@ services:
 
 volumes:
   postgres_data:
+
 
